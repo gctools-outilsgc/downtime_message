@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: ./
+    image: downtime_message
+    ports:
+    - "8080:80"
+    environment:
+    - NGINX_HOST=kanban.gccollab.ca
+    - NGINX_PORT=80
